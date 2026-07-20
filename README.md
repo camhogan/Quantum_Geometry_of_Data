@@ -1,6 +1,6 @@
 # Quantum Geometry of Data
 
-This repository accompanies the paper *Quantum Geometry of Data*. It contains
+This repository accompanies the paper [*Quantum Geometry of Data*](https://arxiv.org/abs/2507.21135) by Alexander G. Abanov et al. It contains
 the input datasets, final trained Hermitian operators, post-training analysis
 code, and figure-generation scripts for the four examples in Section 5:
 
@@ -10,7 +10,8 @@ code, and figure-generation scripts for the four examples in Section 5:
 4. Wisconsin Breast Cancer data (Figure 14).
 
 The HSM implementation and operator-training pipeline are not part of this
-release. The trained operators are supplied directly as portable NumPy files;
+release. For access to these materials, please contact Alexander G. Abanov
+directly. The trained operators are supplied directly as portable NumPy files;
 the public scripts do not depend on the private model class or on PyTorch.
 
 ## Layout
