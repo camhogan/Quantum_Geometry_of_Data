@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+
+# Private research implementation and original working archive.
+HSM-training-codes/
+HSM-training-results/
+Data-generating-codes/
+Figure-generating-codes/
+Datasets/
+private_research/
+
