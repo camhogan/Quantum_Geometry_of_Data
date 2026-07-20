@@ -66,13 +66,5 @@ python scripts/generate_data/generate_conformal_maps.py \
   --output data/input/conformal_maps/conformal_maps_regenerated.npy
 ```
 
-The archived author code and saved datasets are treated as canonical. The
-non-uniform sphere therefore uses polar-angle density
-`(1 + cos(theta))^3 sin(theta)`, and conformal maps use
-`f(z) = (z - a)/(1 - conj(a) z)`. These conventions are retained even where
-the manuscript presents an algebraically different expression.
-
-The uniform sphere remains as an auxiliary basic-reference artifact from the
-earlier explanatory sections; it is not one of the four Section 5 examples.
 
 See the README files within `data/` and `results/` for format details.
