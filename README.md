@@ -73,10 +73,7 @@ randomness.
 | Wisconsin Breast Cancer | not applicable | 42 | 569 | 30 | not applicable | 8 | 0.1 |
 
 `N` denotes Hilbert-space dimension. The synthetic sphere noise is isotropic
-Gaussian standard deviation. Conformal inputs consist of 2,000 maps evaluated
-on 100 shared disk points, hence input dimension 200; `a_max=0.9`, `z_max=1`,
-and global rotation is zero. The two spheres have centers `(0,0,0)` and
-`(0,0,3)`, radii 1.5 and 1, and point counts proportional to surface area.
+Gaussian standard deviation. 
 
 | Experiment | Epochs | Minibatch | Initial learning rate | Learning-rate schedule |
 |---|---:|---:|---:|---|
@@ -86,11 +83,9 @@ and global rotation is zero. The two spheres have centers `(0,0,0)` and
 | Conformal maps | 100,000 | 100 | 0.1 | exponential; gamma 0.999995 |
 | Wisconsin Breast Cancer | 63,878 | 100 | 0.1 | exponential; gamma 0.999994 |
 
-The author training workflow uses Adam with `betas=(0.99, 0.99)`, zero weight
+The workflow uses Adam with `betas=(0.99, 0.99)`, zero weight
 decay, and AMSGrad. Figures in this repository are reproducible from the
-supplied frozen operators. Exact end-to-end retraining additionally depends on
-the private HSM implementation, numerical libraries, and hardware and is not
-part of this public release.
+supplied frozen operators.
 
 ## Two-sphere seed and w stability study
 
@@ -101,8 +96,6 @@ fixes training seed 42 and `w=0.1`, then varies the dataset seed over the same
 five values. This separates sensitivity to model training from sensitivity to
 the sampled noisy dataset.
 
-Each public stability archive contains only compact trained operators, its
-learned QCML cloud, Laplacian spectrum, metrics, and complete JSON metadata.
 Regenerate the public comparisons with:
 
 ```bash
