@@ -60,17 +60,17 @@ operator/eigenmode overlaps, and Laplacian eigenmaps. Outputs are written below
 
 ## Reproducibility parameters
 
-All controlled random processes use seed 42 for the paper runs. Dataset,
-training, and plotting seeds are listed separately because they control
-different sources of randomness. 
+All controlled random processes use seed 42 for the paper runs. Dataset and
+training seeds are listed separately because they control different sources of
+randomness.
 
-| Experiment | Dataset seed | Training seed | Plot/probe seed | Points | Input dimension | Noise | N | w |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Uniform sphere | 42 | 42 | not applicable | 1,000 | 3 | 0 | 4 | 0.1 |
-| Two spheres | 42 | 42 | 42 | 2,000 | 3 | 0.1 | 8 | 0.1 |
-| Non-uniform sphere | 42 | 42 | 42 | 2,000 | 3 | 0.1 | 8 | 0.1 |
-| Conformal maps | 42 | 42 | not applicable | 2,000 | 200 | 0 | 8 | 0.1 |
-| Wisconsin Breast Cancer | not applicable | 42 | not applicable | 569 | 30 | not applicable | 8 | 0.1 |
+| Experiment | Dataset seed | Training seed | Points | Input dimension | Noise | N | w |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Uniform sphere | 42 | 42 | 1,000 | 3 | 0 | 4 | 0.1 |
+| Two spheres | 42 | 42 | 2,000 | 3 | 0.1 | 8 | 0.1 |
+| Non-uniform sphere | 42 | 42 | 2,000 | 3 | 0.1 | 8 | 0.1 |
+| Conformal maps | 42 | 42 | 2,000 | 200 | 0 | 8 | 0.1 |
+| Wisconsin Breast Cancer | not applicable | 42 | 569 | 30 | not applicable | 8 | 0.1 |
 
 `N` denotes Hilbert-space dimension. The synthetic sphere noise is isotropic
 Gaussian standard deviation. Conformal inputs consist of 2,000 maps evaluated
