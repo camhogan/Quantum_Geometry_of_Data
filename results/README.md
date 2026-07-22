@@ -13,3 +13,5 @@ PyTorch state dictionaries are intentionally excluded because they depend on
 the unpublished model implementation. Full training checkpoints are also
 excluded because they contain redundant arrays and, in one case, exceed 600 MB.
 
+`stability/` contains compact operator ensembles and summary data for robustness
+studies. See its README for the exact experimental grid.

@@ -28,5 +28,26 @@ def main():
             raise AssertionError(f"Metadata mismatch: {path}")
         print(f"OK {path.name}: operators {operators.shape}")
 
+    stability = sorted(
+        (ROOT / "results/stability/two_spheres_seed_w").glob("*.npz")
+    )
+    if len(stability) != 34:
+        raise AssertionError(
+            f"Expected 34 two-sphere stability archives, found {len(stability)}"
+        )
+    combinations = set()
+    for path in stability:
+        with np.load(path, allow_pickle=False) as archive:
+            operators = validate_operators(archive["operators"])
+            metadata = json.loads(archive["metadata"].item())
+            spectrum = archive["laplacian_spectrum"]
+        if operators.shape != (3, 8, 8) or spectrum.shape != (64,):
+            raise AssertionError(f"Unexpected stability shapes: {path}")
+        combinations.add((metadata["data_seed"], metadata["training_seed"],
+                          metadata["w"]))
+    if len(combinations) != 34:
+        raise AssertionError("Duplicate stability parameter combinations")
+    print("OK two-sphere stability sweep: 34 unique runs")
+
 if __name__ == "__main__":
     main()

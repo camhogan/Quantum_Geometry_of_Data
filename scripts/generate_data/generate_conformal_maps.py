@@ -32,9 +32,15 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--maps", type=int, default=2000)
     parser.add_argument("--points-per-map", type=int, default=100)
+    parser.add_argument("--a-max", type=float, default=0.9)
+    parser.add_argument("--z-max", type=float, default=1.0)
+    parser.add_argument("--noise", type=float, default=0.0)
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
-    data, parameters = generate(args.maps, args.points_per_map, seed=args.seed)
+    data, parameters = generate(
+        args.maps, args.points_per_map, args.a_max, args.z_max,
+        args.noise, args.seed,
+    )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     np.save(args.output, data)
     np.save(args.output.with_name(args.output.stem + "_parameters.npy"), parameters)
@@ -43,4 +49,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

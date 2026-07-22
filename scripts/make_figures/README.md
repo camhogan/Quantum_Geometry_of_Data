@@ -1,6 +1,8 @@
 # Figure-generation entry points
 
+- `uniform_sphere.py`: analyses underlying Figures 2 and 4.
 - `two_spheres.py`: analyses underlying Figures 5 and 6.
+- `two_spheres_stability.py`: two-sphere seed and `w` robustness study.
 - `nonuniform_sphere.py`: analyses underlying Figures 7 and 8.
 - `conformal_maps.py`: analyses underlying Figures 9 through 13.
 - `breast_cancer.py`: analyses underlying Figure 14.
