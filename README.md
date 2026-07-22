@@ -60,9 +60,9 @@ operator/eigenmode overlaps, and Laplacian eigenmaps. Outputs are written below
 
 ## Reproducibility parameters
 
-All controlled random processes use seed 42 for the paper runs. Dataset and
-training seeds are listed separately because they control different sources of
-randomness.
+The recorded dataset and training seeds are 42 for every applicable paper run.
+Dataset and training seeds are listed separately because they control different
+sources of randomness.
 
 | Experiment | Dataset seed | Training seed | Points | Input dimension | Noise | N | w |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -70,7 +70,7 @@ randomness.
 | Two spheres | 42 | 42 | 2,000 | 3 | 0.1 | 8 | 0.1 |
 | Non-uniform sphere | 42 | 42 | 2,000 | 3 | 0.1 | 8 | 0.1 |
 | Conformal maps | 42 | 42 | 2,000 | 200 | 0 | 8 | 0.1 |
-| Wisconsin Breast Cancer | not applicable | 42 | 569 | 30 | not applicable | 8 | 0.1 |
+| Wisconsin Breast Cancer | not applicable | 42 | 569 | 30 | 0 | 8 | 0.1 |
 
 `N` denotes Hilbert-space dimension. The synthetic sphere noise is isotropic
 Gaussian standard deviation. 
