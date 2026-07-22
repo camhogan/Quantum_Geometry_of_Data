@@ -69,7 +69,7 @@ different sources of randomness.
 | Uniform sphere | 42 | 42 | not applicable | 1,000 | 3 | 0 | 4 | 0.1 |
 | Two spheres | 42 | 42 | 42 | 2,000 | 3 | 0.1 | 8 | 0.1 |
 | Non-uniform sphere | 42 | 42 | 42 | 2,000 | 3 | 0.1 | 8 | 0.1 |
-| Conformal maps | not recorded (archive); 42 (public generator) | 42 | not applicable | 2,000 | 200 | 0 | 8 | 0.1 |
+| Conformal maps | 42 | 42 | not applicable | 2,000 | 200 | 0 | 8 | 0.1 |
 | Wisconsin Breast Cancer | not applicable | 42 | not applicable | 569 | 30 | not applicable | 8 | 0.1 |
 
 `N` denotes Hilbert-space dimension. The synthetic sphere noise is isotropic
