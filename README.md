@@ -87,6 +87,8 @@ The workflow uses Adam with `betas=(0.99, 0.99)`, zero weight
 decay, and AMSGrad. Figures in this repository are reproducible from the
 supplied frozen operators.
 
+Conformal-map training times and hardware specifications are [available here](results/benchmarks/Conformal_Map_Training_Time_Benchmark.pdf).
+
 ## Two-sphere seed and w stability study
 
 The robustness study contains 34 unique 10,000-epoch training runs. Its main
