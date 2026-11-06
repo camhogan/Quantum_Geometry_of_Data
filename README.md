@@ -9,7 +9,7 @@ four examples in Section 5:
 2. Two disconnected spheres with noise (Figures 5--6).
 3. A sphere with a non-uniform distribution of points (Figures 7--8).
 4. A dataset of conformal maps (Figures 9--13).
-5. Wisconsin Breast Cancer data (Figure 14).
+5. Wisconsin Breast Cancer data (Figures 14--16).
 
 The HSM implementation and operator-training pipeline are not part of this
 release. For access to these materials, please contact Alexander G. Abanov
@@ -70,7 +70,7 @@ sources of randomness.
 | Two spheres | 42 | 42 | 2,000 | 3 | 0.1 | 8 | 0.1 |
 | Non-uniform sphere | 42 | 42 | 2,000 | 3 | 0.1 | 8 | 0.1 |
 | Conformal maps | 42 | 42 | 2,000 | 200 | 0 | 8 | 0.1 |
-| Wisconsin Breast Cancer | not applicable | 42 | 569 | 30 | 0 | 8 | 0.1 |
+| Wisconsin Breast Cancer | not applicable | 42 | 569 | 30 | 0 | 8 | 0.2, 0.5 |
 
 `N` denotes Hilbert-space dimension. The synthetic sphere noise is isotropic
 Gaussian standard deviation. 
@@ -86,6 +86,9 @@ Gaussian standard deviation.
 The workflow uses Adam with `betas=(0.99, 0.99)`, zero weight
 decay, and AMSGrad. Figures in this repository are reproducible from the
 supplied frozen operators.
+
+The WBC operators used by Figures 14--15 (`w=0.2`) and Figure 16 (`w=0.5`)
+are provided as `wbc_N8_w0p2.npz` and `wbc_N8_w0p5.npz`.
 
 Conformal-map training times and hardware specifications are [available here](results/benchmarks/Conformal_Map_Training_Time_Benchmark.pdf).
 

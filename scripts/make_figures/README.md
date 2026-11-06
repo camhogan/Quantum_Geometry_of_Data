@@ -5,7 +5,7 @@
 - `two_spheres_stability.py`: two-sphere seed and `w` robustness study.
 - `nonuniform_sphere.py`: analyses underlying Figures 7 and 8.
 - `conformal_maps.py`: analyses underlying Figures 9 through 13.
-- `breast_cancer.py`: analyses underlying Figure 14.
+- `breast_cancer.py`: analyses underlying Figures 14 through 16.
 - `quantum_geometry.py`: shared NumPy post-training calculations.
 
 These scripts load frozen Hermitian matrices from `results/trained_operators/`.
