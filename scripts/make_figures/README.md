@@ -11,6 +11,12 @@
 These scripts load frozen Hermitian matrices from `results/trained_operators/`.
 They neither contain nor invoke HSM training code.
 
+The WBC script additionally writes the six individual manuscript panels with
+filenames recording the public `E63878-MBatch100` protocol. Run
+`scripts/analyze_breast_cancer.py` first to regenerate the saved response
+spectra and Table 1 quantities; run `scripts/analyze_wbc_classifiers.py` to
+regenerate the four eigenmap-classifier rows.
+
 For Figures 5--8, the scripts use the monopole coordinates and topological
 charges produced by the author notebook's grid search. Re-running that costly
 search is not required to regenerate the paper panels.

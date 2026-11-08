@@ -44,6 +44,8 @@ python scripts/make_figures/uniform_sphere.py
 python scripts/make_figures/two_spheres.py
 python scripts/make_figures/nonuniform_sphere.py
 python scripts/make_figures/conformal_maps.py
+python scripts/analyze_breast_cancer.py
+python scripts/analyze_wbc_classifiers.py
 python scripts/make_figures/breast_cancer.py
 ```
 
@@ -70,7 +72,7 @@ sources of randomness.
 | Two spheres | 42 | 42 | 2,000 | 3 | 0.1 | 8 | 0.1 |
 | Non-uniform sphere | 42 | 42 | 2,000 | 3 | 0.1 | 8 | 0.1 |
 | Conformal maps | 42 | 42 | 2,000 | 200 | 0 | 8 | 0.1 |
-| Wisconsin Breast Cancer | not applicable | 42 | 569 | 30 | 0 | 8 | 0.2, 0.5 |
+| Wisconsin Breast Cancer | not applicable | 42 | 569 | 30 | 0 | 8 | 0.02, 0.05, 0.1, 0.2, 0.5, 0.8 |
 
 `N` denotes Hilbert-space dimension. The synthetic sphere noise is isotropic
 Gaussian standard deviation. 
@@ -87,8 +89,14 @@ The workflow uses Adam with `betas=(0.99, 0.99)`, zero weight
 decay, and AMSGrad. Figures in this repository are reproducible from the
 supplied frozen operators.
 
-The WBC operators used by Figures 14--15 (`w=0.2`) and Figure 16 (`w=0.5`)
-are provided as `wbc_N8_w0p2.npz` and `wbc_N8_w0p5.npz`.
+The WBC operator set covers all six weights used by Table 1. The `w=0.1`
+archive retains its original name, `wbc_N8.npz`; the other five use explicit
+weight suffixes. Figures 14--15 use `wbc_N8_w0p2.npz`, and Figure 16 uses
+`wbc_N8_w0p5.npz`. `scripts/analyze_breast_cancer.py` regenerates the response
+spectra, Table 1 dimensions, Laplacian spectra, eigenmap coordinates, feature
+overlaps, and the isolated-sample check. `scripts/analyze_wbc_classifiers.py`
+regenerates the operator-dependent rows of the classifier table under the
+documented ten-fold stratified protocol.
 
 Conformal-map training times and hardware specifications are [available here](results/benchmarks/Conformal_Map_Training_Time_Benchmark.pdf).
 

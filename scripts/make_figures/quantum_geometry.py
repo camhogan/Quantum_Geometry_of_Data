@@ -54,6 +54,22 @@ def quantum_metric(points: np.ndarray, operators: np.ndarray) -> np.ndarray:
     )).real
 
 
+def response_eigenvalues(
+    points: np.ndarray, operators: np.ndarray
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Return the QCML cloud, response matrices, and their eigenvalues.
+
+    The response matrix is the quantum metric evaluated on the expectation-
+    value image of each input point.  This is the convention used for the WBC
+    intrinsic-dimension table.
+    """
+    energies, states = coherent_states(points, operators)
+    cloud = expectation_values(states, operators)
+    response = quantum_metric(cloud, operators)
+    eigenvalues = np.linalg.eigvalsh(response)
+    return energies, cloud, eigenvalues
+
+
 def berry_curvature(points: np.ndarray, operators: np.ndarray) -> np.ndarray:
     """Return the antisymmetric Berry-curvature tensor at each point."""
     values, vectors = np.linalg.eigh(hamiltonians(points, operators))

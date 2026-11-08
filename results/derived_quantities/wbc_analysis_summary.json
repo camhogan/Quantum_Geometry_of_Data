@@ -1,0 +1,45 @@
+{
+  "weights": [
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.5,
+    0.8
+  ],
+  "dimensions": [
+    7,
+    5,
+    4,
+    3,
+    2,
+    1
+  ],
+  "threshold": 0.5,
+  "w0p5_isolated_indices_zero_based": [
+    461,
+    212
+  ],
+  "w0p5_isolated_labels": [
+    "M",
+    "M"
+  ],
+  "w0p5_isolated_distance": 3.668342969259844e-07,
+  "w0p5_main_cloud_count": 567,
+  "w0p5_main_cloud_y1_range": [
+    0.13314281515193283,
+    0.13425493012639172
+  ],
+  "w0p2_weyl_fit": {
+    "dimension": 2.5005073155739184,
+    "slope": 1.2502536577869592,
+    "intercept": 2.088498877181015,
+    "r_squared": 0.9174820408052916,
+    "lambda_nc": 1.7635498046875,
+    "window_lower": 0.5576834149957589,
+    "window_upper": 5.57683414995759,
+    "window_mode_count": 48,
+    "counting_convention": "trivial zero mode excluded; positive modes count from 1",
+    "window_convention": "one log decade centered on lambda_nc"
+  }
+}
